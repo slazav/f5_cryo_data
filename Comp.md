@@ -12,8 +12,9 @@ Internal network is connected via second ethernet card.
 See `/etc/netplan`.
 
 DHCP server is working on the internal network:
-- Service: `systemctl status isc-dhcp-server`
-- Configuration: `/etc/dhc~cpd.conf`
+ - Service: `systemctl (start|stop|restart|status) isc-dhcp-server`
+ - Configuration: `/etc/dhc~cpd.conf`
+ - Also note aliases for network devices in `/etc/hosts`
 
 Firewall is controlled by `ufw` program, see `ufw status`.
 Open ports:

@@ -8,8 +8,12 @@ A the moment computer is installed on the 1st floor and connected to
 university network. ip address: `148.88.189.202`, name:
 `pya522000026.lancs.ac.uk`, internally domain name is set to `f5a`.
 
-Internal network is connected (via second ethernet card),
-but not configured yet.
+Internal network is connected via second ethernet card.
+See `/etc/netplan`.
+
+DHCP server is working on the internal network:
+- Service: `systemctl status isc-dhcp-server`
+- Configuration: `/etc/dhc~cpd.conf`
 
 Firewall is controlled by `ufw` program, see `ufw status`.
 Open ports:
@@ -83,10 +87,10 @@ Start/stop/enable/disable/status for desktop `:10`:
 
 ### Local programs
 
-* Graphene -- the database.
+#### Graphene -- the database.
 `https://github.com/slazav/graphene`
 
-* Device2 -- server for accessing databases and devices
+#### Device2 -- server for accessing databases and devices
 `https://github.com/slazav/device2`
 
 At the moment installed without gpib support (libgpib is not supported in
@@ -107,22 +111,22 @@ Example:
 Agilent Technologies,33521B,MY52701054,2.09-1.19-2.00-52-00
 ```
 
-* fit_res -- a simple tool for fitting linear resonances
+#### fit_res -- a simple tool for fitting linear resonances
 `https://github.com/slazav/fit_res`
 
-* tcl-xblt -- some useful tcl/tk libraries from ROTA group
+#### tcl-xblt -- some useful tcl/tk libraries from ROTA group
 `https://github.com/slazav/tcl-xblt`
 
-* tcl-device_role -- second layer of device drivers
+#### tcl-device_role -- second layer of device drivers
 `https://github.com/slazav/tcl-device_role`
 
-* tcl-exp -- interfaces for measurement programs
+#### tcl-exp -- interfaces for measurement programs
 `https://github.com/slazav/tcl-exp`
 
-* pico_osc -- driver for Pico oscilloscopes and ADC
+#### pico_osc -- driver for Pico oscilloscopes and ADC
 `https://github.com/slazav/pico_osc`
 
-* he3lib -- he3 library
+#### he3lib -- he3 library
 `http://slazav.github.io/he3lib/index.htm`
 `https://github.com/slazav/he3lib`
 

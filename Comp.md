@@ -85,6 +85,10 @@ User mapping (virtual desktop -> user):
 Start/stop/enable/disable/status for desktop `:10`:
   `systemctl (start|stop|enable|disable|status) tigervncserver@:10.service`
 
+SSH tunnel:
+
+  `ssh f5a -L 5910:localhost:5910`
+
 
 ### Local programs
 

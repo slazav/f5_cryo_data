@@ -89,6 +89,25 @@ SSH tunnel:
 
   `ssh f5a -L 5910:localhost:5910`
 
+### Grafana
+
+Install package: `apt-get install grafana-enterprise`
+
+Enable service: `systemctl enable grafana-server`
+
+Open port for grafana: `ufw allow 3000/tcp`
+
+Set admin password: `grafana-cli admin reset-admin-password <new passwd>`
+
+Install json plug-in: `grafana-cli plugins install simpod-json-datasource`
+
+Enable and start graphene_http server: `systemctl enable graphene_http`,
+`service graphene_http start`
+(check directory and port setting in `/etc/init.d/graphene_http`).
+
+Create new datasource in grafana web interface: `url=http://localhost:8080`,
+`access=Server`
+
 
 ### Local programs
 
